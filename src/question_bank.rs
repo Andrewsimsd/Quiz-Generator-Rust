@@ -4,11 +4,11 @@ use std::io::BufReader;
 use serde_xml_rs::from_reader;
 
 #[derive(Debug, Deserialize)]
-pub struct Quiz {
+pub struct QuestionBank {
     #[serde(rename = "question")]
     pub questions: Vec<Question>,
 }
-impl Quiz {
+impl QuestionBank {
     // Function to create a Quiz instance from an XML file
     pub fn from_xml_file(file_path: &str) -> Result<Self, Box<dyn std::error::Error>> {
         // Read the XML file
@@ -16,9 +16,9 @@ impl Quiz {
         let reader: BufReader<File> = BufReader::new(file);
 
         // Parse the XML file into the Quiz struct
-        let quiz: Quiz = from_reader(reader)?;
+        let bank: QuestionBank = from_reader(reader)?;
 
-        Ok(quiz)
+        Ok(bank)
     }
 }
 
