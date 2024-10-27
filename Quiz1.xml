@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question id="1" type="multiple-choice">
+        <text>What is the capital of France?</text>
+        <image>https://example.com/images/paris.jpg</image>
+        <choices>
+            <choice correct="false">London</choice>
+            <choice correct="true">Paris</choice>
+            <choice correct="false">Rome</choice>
+            <choice correct="false">Berlin</choice>
+        </choices>
+    </question>
+
+    <question id="2" type="true-false">
+        <text>The sun is a star.</text>
+        <choices>
+            <choice correct="true">True</choice>
+            <choice correct="false">False</choice>
+        </choices>
+    </question>
+
+    <question id="3" type="fill-in-the-blank">
+        <text>_____ is the largest planet in our solar system.</text>
+        <answer>Jupiter</answer>
+        <image>https://example.com/images/jupiter.jpg</image>
+    </question>
+
+    <question id="4" type="multiple-choice">
+        <text>Which animal is known as the king of the jungle?</text>
+        <image>https://example.com/images/lion.jpg</image>
+        <choices>
+            <choice correct="true">Lion</choice>
+            <choice correct="false">Elephant</choice>
+            <choice correct="false">Tiger</choice>
+            <choice correct="false">Cheetah</choice>
+        </choices>
+    </question>
+
+    <question id="5" type="multiple-choice">
+        <text>Which planet is known as the Red Planet?</text>
+        <image>https://example.com/images/mars.jpg</image>
+        <choices>
+            <choice correct="false">Venus</choice>
+            <choice correct="false">Earth</choice>
+            <choice correct="true">Mars</choice>
+            <choice correct="false">Jupiter</choice>
+        </choices>
+    </question>
+</quiz>
