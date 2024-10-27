@@ -40,12 +40,11 @@ struct Choice {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Open the XML file
-    let file = File::open(r"C:\Users\andre\OneDrive\Documents\GitHub\Quiz-Generator-Rust\Quiz1.xml")?;
-    let reader = BufReader::new(file);
+    let file: File = File::open(r"C:\Users\andre\Documents\GitHub\Quiz-Generator-Rust\Quizzes\Quiz1.xml")?;
+    let reader: BufReader<File> = BufReader::new(file);
 
     // Parse the XML file into the Quiz struct
     let quiz: Quiz = from_reader(reader)?;
-
     // Print the parsed data
     println!("{:#?}", quiz);
 
