@@ -1,9 +1,25 @@
 use serde::Deserialize;
+use std::fs::File;
+use std::io::BufReader;
+use serde_xml_rs::from_reader;
 
 #[derive(Debug, Deserialize)]
 pub struct Quiz {
     #[serde(rename = "question")]
     pub questions: Vec<Question>,
+}
+impl Quiz {
+    // Function to create a Quiz instance from an XML file
+    pub fn from_xml_file(file_path: &str) -> Result<Self, Box<dyn std::error::Error>> {
+        // Read the XML file
+        let file: File = File::open(file_path)?;
+        let reader: BufReader<File> = BufReader::new(file);
+
+        // Parse the XML file into the Quiz struct
+        let quiz: Quiz = from_reader(reader)?;
+
+        Ok(quiz)
+    }
 }
 
 #[derive(Debug, Deserialize)]
