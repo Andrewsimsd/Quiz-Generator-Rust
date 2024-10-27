@@ -11,18 +11,26 @@
         </choices>
     </question>
 
-    <question id="2" type="true-false">
-        <text>The sun is a star.</text>
+    <question id="2" type="multiple-choice">
+        <text>The answer to this is B.</text>
+        <image>https://example.com/images/paris.jpg</image>
         <choices>
-            <choice correct="true">True</choice>
-            <choice correct="false">False</choice>
+            <choice correct="false">London</choice>
+            <choice correct="true">Paris</choice>
+            <choice correct="false">Rome</choice>
+            <choice correct="false">Berlin</choice>
         </choices>
     </question>
 
-    <question id="3" type="fill-in-the-blank">
-        <text>_____ is the largest planet in our solar system.</text>
-        <answer>Jupiter</answer>
-        <image>https://example.com/images/jupiter.jpg</image>
+    <question id="3" type="multiple-choice">
+        <text>The answer to this is C.</text>
+        <image>https://example.com/images/paris.jpg</image>
+        <choices>
+            <choice correct="false">London</choice>
+            <choice correct="false">Paris</choice>
+            <choice correct="true">Rome</choice>
+            <choice correct="false">Berlin</choice>
+        </choices>
     </question>
 
     <question id="4" type="multiple-choice">

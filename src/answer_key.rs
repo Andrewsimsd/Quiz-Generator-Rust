@@ -16,9 +16,9 @@ impl AnswerKey {
         let reader: BufReader<File> = BufReader::new(file);
 
         // Parse the XML file into the Quiz struct
-        let answerKey: AnswerKey = from_reader(reader)?;
+        let answer_key: AnswerKey = from_reader(reader)?;
 
-        Ok(answerKey)
+        Ok(answer_key)
     }
 }
 #[derive(Debug, Deserialize)]
