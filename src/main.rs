@@ -1,6 +1,7 @@
 mod answer_key;
 mod question_bank;
 mod quiz;
+mod Quiz;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
 
