@@ -33,8 +33,6 @@ pub struct Question {
     pub image: Option<String>,
     #[serde(rename = "choices", default)]
     pub choices: Option<Choices>,
-    #[serde(rename = "answer", default)]
-    pub answer: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]

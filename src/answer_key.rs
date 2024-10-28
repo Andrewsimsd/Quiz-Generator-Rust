@@ -6,7 +6,7 @@ use serde_xml_rs::from_reader;
 #[derive(Debug, Deserialize)]
 pub struct AnswerKey {
     #[serde(rename = "question")]
-    questions: Vec<Question>,
+    pub questions: Vec<Question>,
 }
 impl AnswerKey {
     // Function to create an AnswerKey instance from an XML file
@@ -24,5 +24,5 @@ impl AnswerKey {
 #[derive(Debug, Deserialize)]
 pub struct Question {
     #[serde(rename = "answer")]
-    answer: String,
+    pub answer: String,
 }
