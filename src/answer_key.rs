@@ -10,7 +10,7 @@ pub struct AnswerKey {
 }
 impl AnswerKey {
     // Function to create an AnswerKey instance from an XML file
-    pub fn from_xml_file(file_path: &str) -> Result<Self, Box<dyn std::error::Error>> {
+    pub fn new(file_path: String) -> Result<Self, Box<dyn std::error::Error>> {
         // Read the XML file
         let file: File = File::open(file_path)?;
         let reader: BufReader<File> = BufReader::new(file);
