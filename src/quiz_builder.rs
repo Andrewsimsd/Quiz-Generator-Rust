@@ -1,16 +1,15 @@
-/* use crate::question_bank::QuestionBank;
+use crate::question_bank::QuestionBank;
 use crate::answer_key::AnswerKey;
 
 pub struct QuizBuilder {
-    questions: Vec<Question>,
+    question_bank: QuestionBank,
+    answer_keys: Vec<AnswerKey>
 }
 impl QuizBuilder {
-    pub fn new(question_bank: &QuestionBank, answer_keys: &Vec<AnswerKey>) -> Self {
-        UserBuilder {
-            username: username.to_string(),
-            email: email.to_string(),
-            age: None,
-            address: None,
+    pub fn new(question_bank: QuestionBank, answer_keys: Vec<AnswerKey>) -> Self {
+        QuizBuilder {
+            question_bank,
+            answer_keys,
         }
     }
-} */
+}

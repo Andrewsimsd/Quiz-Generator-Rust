@@ -19,7 +19,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let answer_key_dir = String::from(r"C:\Users\andre\Documents\GitHub\Quiz-Generator-Rust\answer_keys\");
     let answer_keys: Vec<AnswerKey> = get_answer_keys_from_dir(answer_key_dir)?;
     
-    //let quiz_builder = quiz_builder::QuizBuilder::new(&question_bank, answer_keys);
+    let quiz_builder = quiz_builder::QuizBuilder::new(question_bank, answer_keys);
 
     Ok(())
 }
