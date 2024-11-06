@@ -1,6 +1,7 @@
 use crate::question_bank::QuestionBank;
 use crate::answer_key::AnswerKey;
 use std::collections::HashMap;
+use serde::Deserialize;
 
 pub struct Quiz {
     questions: Vec<Question>,
@@ -21,20 +22,29 @@ impl Quiz {
         Quiz{questions}
     }
 }
+#[derive(Debug, Deserialize)]
 pub struct Question {
+    #[serde(rename = "id", default)]
     pub id: String,
+    #[serde(rename = "type", default)]
     pub qtype: String,
     pub text: String,
+    #[serde(rename = "image", default)]
     pub image: Option<String>,
+    #[serde(rename = "choices", default)]
     pub choices: Option<Choices>,
-    pub answer: Option<String>,
 }
 
+#[derive(Debug, Deserialize)]
 pub struct Choices {
+    #[serde(rename = "choice")]
     pub choice: Vec<Choice>,
 }
 
+#[derive(Debug, Deserialize)]
 pub struct Choice {
+    #[serde(rename = "correct", default)]
     pub correct: Option<bool>,
+    #[serde(rename = "$value")]
     pub text: String,
 }

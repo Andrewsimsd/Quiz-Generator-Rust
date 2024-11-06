@@ -9,7 +9,6 @@ mod answer_key;
 mod question_bank;
 mod quiz;
 mod quiz_builder;
-mod Quiz;
 
 fn main() -> Result<(), Box<dyn Error>> {
 
@@ -38,7 +37,6 @@ fn get_answer_keys_from_dir(dir: String) -> Result<Vec<answer_key::AnswerKey>, B
             .filter_map(Result::ok)  // Only keep Ok values, discard Err
             .collect();
     }
-
     Ok(answer_keys)
 }
 

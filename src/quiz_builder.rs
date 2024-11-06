@@ -12,4 +12,9 @@ impl QuizBuilder {
             answer_keys,
         }
     }
+    pub fn generate_quizes(&mut self, num: usize, output_dir: String){
+        for answer_key in &self.answer_keys{
+            
+        }
+    }
 }
