@@ -20,6 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     
     let quiz_builder = quiz_builder::QuizBuilder::new(question_bank, answer_keys);
 
+    info!("Done.");
     Ok(())
 }
 
